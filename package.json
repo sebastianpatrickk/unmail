@@ -7,6 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "instant:info": "INSTANT_CLI_API_URI=https://instant-api.sebastianpatrickk.site instant-cli info",
+    "instant:push": "INSTANT_CLI_API_URI=https://instant-api.sebastianpatrickk.site instant-cli push all --yes --app 1796699c-85ff-4485-a3bc-553e402cfc8a",
+    "instant:push:schema": "INSTANT_CLI_API_URI=https://instant-api.sebastianpatrickk.site instant-cli push schema --yes --app 1796699c-85ff-4485-a3bc-553e402cfc8a",
+    "instant:push:perms": "INSTANT_CLI_API_URI=https://instant-api.sebastianpatrickk.site instant-cli push perms --yes --app 1796699c-85ff-4485-a3bc-553e402cfc8a",
+    "instant:pull": "INSTANT_CLI_API_URI=https://instant-api.sebastianpatrickk.site instant-cli pull all --yes --app 1796699c-85ff-4485-a3bc-553e402cfc8a",
+    "instant:pull:schema": "INSTANT_CLI_API_URI=https://instant-api.sebastianpatrickk.site instant-cli pull schema --yes --app 1796699c-85ff-4485-a3bc-553e402cfc8a",
+    "instant:pull:perms": "INSTANT_CLI_API_URI=https://instant-api.sebastianpatrickk.site instant-cli pull perms --yes --app 1796699c-85ff-4485-a3bc-553e402cfc8a",
+    "instant:query": "INSTANT_CLI_API_URI=https://instant-api.sebastianpatrickk.site instant-cli query --admin --app 1796699c-85ff-4485-a3bc-553e402cfc8a",
+    "instant:explorer": "INSTANT_CLI_API_URI=https://instant-api.sebastianpatrickk.site instant-cli explorer --app 1796699c-85ff-4485-a3bc-553e402cfc8a",
     "patch:instant-devtools": "node scripts/patch-instant-devtools.mjs",
     "postinstall": "node scripts/patch-instant-devtools.mjs"
   },
@@ -22,8 +32,9 @@
     "@types/node": "^20.19.39",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19",
+    "instant-cli": "^1.0.33",
     "tailwindcss": "^4.2.4",
     "typescript": "^5.9.3"
   },
-  "packageManager": "npm@11.9.0"
+  "packageManager": "pnpm@10.32.1"
 }

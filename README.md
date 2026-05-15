@@ -5,7 +5,7 @@ InstantDB-backed inbound email sync for n8n.
 ## Development
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 The app runs at `http://127.0.0.1:3000` by default.
@@ -43,10 +43,19 @@ server-side admin calls.
 
 ## Instant Schema
 
-Push schema and permissions after logging into the Instant CLI:
+Instant CLI commands are wired to the custom API instance and app id in
+`package.json`.
 
 ```bash
-npx instant-cli login
-npx instant-cli push schema --yes
-npx instant-cli push perms --yes
+pnpm instant:push:schema
+pnpm instant:push:perms
+```
+
+Other helpers:
+
+```bash
+pnpm instant:push
+pnpm instant:pull
+pnpm instant:query '{ inboundEmails: { $: { limit: 1 } } }'
+pnpm instant:explorer
 ```
