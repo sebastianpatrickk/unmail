@@ -23,7 +23,7 @@ export const db = init({
     allowedHosts: [
       "localhost",
       "127.0.0.1",
-      "memos.sebastianpatrickk.site",
+      "unmail.sebastianpatrickk.site",
     ],
   },
 });
