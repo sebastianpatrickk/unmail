@@ -13,11 +13,6 @@ const _schema = i.schema({
       imageURL: i.string().optional(),
       type: i.string().optional(),
     }),
-    todos: i.entity({
-      text: i.string(),
-      done: i.boolean(),
-      createdAt: i.number(),
-    }),
     inboundEmails: i.entity({
       syncKey: i.string().unique().indexed(),
       source: i.string().indexed(),
@@ -64,19 +59,6 @@ const _schema = i.schema({
     }),
   },
   links: {
-    $usersLinkedPrimaryUser: {
-      forward: {
-        on: "$users",
-        has: "one",
-        label: "linkedPrimaryUser",
-        onDelete: "cascade",
-      },
-      reverse: {
-        on: "$users",
-        has: "many",
-        label: "linkedGuestUsers",
-      },
-    },
     inboundEmailAttachments: {
       forward: {
         on: "inboundEmails",
@@ -100,11 +82,6 @@ const _schema = i.schema({
         has: "many",
         label: "emailAttachments",
       },
-    },
-  },
-  rooms: {
-    todos: {
-      presence: i.entity({}),
     },
   },
 });
